@@ -28,46 +28,30 @@
 
 /* ===== Celulares (até 768px) ===== */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 0 10px;
-  }
-
   .sidebar {
     width: 100%;
-    height: auto;        /* não fixa altura */
-    margin-bottom: 10px; /* separa do carrossel */
+    height: auto;
+    margin-bottom: 0; 
+    padding: 5px 0;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
     background: #111;
+    position: relative;  /* garante que não flutue */
+    z-index: 1;          /* menor prioridade que o carrossel */
   }
 
-  .sidebar ul {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .sidebar ul li {
-    border: none;
-    padding: 10px;
-    font-size: 12px;
-    flex-shrink: 0;
-    white-space: nowrap; /* evita quebra estranha */
-  }
-
-  /* Força o carrossel a colar no topo do conteúdo */
   .swiper {
-    width: 100%;
-    height: 200px;
-    margin-top: 0; /* garante que não fica espaço sobrando */
+    margin-top: 10px; /* dá respiro abaixo do menu */
+    position: relative;
+    z-index: 0;       /* fica por cima do fundo da sidebar */
   }
 
   .swiper-slide img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    display: block;
   }
 }
 
@@ -112,4 +96,5 @@
     height: 120px;
   }
 }
+
 
