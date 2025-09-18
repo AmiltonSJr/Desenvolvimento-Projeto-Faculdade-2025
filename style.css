@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative; /* Permite posicionamento absoluto dos elementos filhos */
+    height: 100vh; /* Altura total da viewport */
+    background-color: #1f1f1f; /* Cor de fundo da página */
+}
+.header{
+    border: 2px solid rgb(7, 7, 7);   /* Borda ao redor do cabeçalho */
+    background-color: #181818;  /* Cor de fundo da barra de navegação */
+    height: 70px; /* Altura da barra de navegação */
+}
+
+.navbar{
+    display: flex; /* Coloca os itens lado a lado */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha verticalmente os itens */
+    height: 100%; /* Altura total da barra de navegação */
+    padding: 0 20px; /* Espaçamento interno à esquerda e direita */
+}
+
+
+                /* Estilos para a imagem + nome do logo */
+.logo {
+    display: flex;          /* Coloca os itens lado a lado */
+    align-items: center;    /* Alinha verticalmente a logo com o texto */
+    text-decoration: none;  /* Remove sublinhado do link */
+    color: #07bcee;            /* Cor do texto */
+    font-family: "Orbitron", sans-serif; /* Fonte personalizada */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+.logo img {
+    padding-left: 20px; /* Espaço à esquerda da imagem */
+    margin-right: 10px;     /* Espaço entre imagem e texto */
+}
+
+                /* Estilos para o menu de navegação */
+
+.nav-menu{
+    display: flex; /* Coloca os itens lado a lado */
+    justify-content: right; /* Centraliza os itens horizontalmente */
+    text-decoration: none; /* Remove sublinhado dos links */
+    list-style: none; /* Remove marcadores da lista */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding-right: 50px; /* Espaço à direita do menu */
+}
+.nav-menu a{
+    text-decoration: none; /* remove sublinhado */
+    color: white;        /* herda a cor do <li> */
+    font-family:  "Montserrat", sans-serif; /* Fonte personalizada */
+    font-size: 15px; /* Tamanho da fonte */
+}
+.nav-menu a :hover{
+    color:#07bcee; /* Cor ao passar o mouse */
+}
+                 
+                /* Estilos para o menu de pesquisa */
+.search{
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 20px 0 0 20px; /* Bordas arredondadas */
+    border: #090c35 2px solid ; /* Remove borda padrão */
+    width: 400px; /* Largura do campo de pesquisa */
+    max-height: auto; /* Altura automática */
+    font-size: 14px; /* Tamanho da fonte */
+    font-family: "Montserrat", sans-serif; /* Fonte personalizada */
+}
+.search:focus{
+    outline: none; /* Remove contorno ao focar */
+    border: #090c35 1px solid ; /* Borda azul ao focar */
+} 
+.search-button{
+    height: 42px; /* Altura do botão */
+    margin-left: -112px; /* Sobrepõe o botão ao campo de pesquisa */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 0 20px 20px 0; /* Bordas arredondadas */
+    border: #000000 2px solid ; /* Borda padrão */
+    background-color:#000000; /*    Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    font-family: "Montserrat", sans-serif; /* Fonte personalizada */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+.search-button:hover{
+    background-color: #03a1d6; /* Cor de fundo ao passar o mouse */
+    
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Esconde o menu de navegação em telas pequenas */
+    }
+    .search {
+        width: 200px; /* Reduz a largura do campo de pesquisa em telas pequenas */
+    }
+}
+
+          /* Estilos para o corpo da página */
+.container {
+  display: flex;          /* coloca aside e section na mesma linha */
+}
+.container{
+    border-bottom: 2px solid black; /* Borda inferior */
+    display: flex; /* Coloca os itens lado a lado */
+}
+.main-content {
+  flex: 1;  /* ocupa todo o espaço que sobra */
+  padding: 20px; /* espaçamento interno */
+  background: #1f1f1f; /* cor de fundo */
+  color: #ffffff; /* cor do texto */
+  display: flex; /* usa flexbox para alinhar o conteúdo */
+}
+
+.sidebar{
+    display: block; /* Coloca os itens lado a lado */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    width: 200px; /* Largura da barra lateral */
+    height: 368px; /* Altura total da viewport */
+    background-color: rgb(15, 15, 15); /* Cor de fundo da barra lateral  */ 
+    border: #000000 2px solid; /* Borda direita */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    padding-top: 0%;  /*Espaçamento interno */
+    margin: 2px; /* Espaçamento externo à esquerda */
+}
+.sidebar h2{
+    text-align: center; /* Centraliza o texto */
+    font-family: "Orbitron", sans-serif; /* Fonte personalizada */
+    font-size: 14px;    /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    background-color: rgb(17, 17, 17); /* Cor de fundo do título */
+    padding-bottom: 1px; /* Espaçamento interno abaixo do texto */
+    padding-top: 2px; /* Espaçamento interno abaixo do texto */
+}
+.sidebar ul{
+    width: 100%; /* Largura total da barra lateral */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove espaçamento externo */
+}
+.sidebar a{
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    outline: none; /* Remove contorno ao focar */
+}
+.sidebar ul li{
+    list-style: none; /* Remove marcadores da lista */
+    padding-bottom: 15px; /* Espaçamento interno abaixo do texto */
+    padding-top: 15px; /* Espaçamento interno acima do texto */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-family: "Montserrat", sans-serif; /* Fonte personalizada */
+    font-size: 14px; /* Tamanho da fonte */
+    border-bottom: 1px solid #333; /* Linha divisória entre os itens */
+}
+.sidebar ul li:hover{
+    background-color: #03a1d6; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+.main-content{
+    background-color: rgb(15, 15, 15) ;     /* Cor de fundo da seção principal */
+    height: 60vh; /* Altura automática */
+    flex-direction: row;
+}
+.swiper {
+  width: 900px; /* largura do carrossel */
+  height: 300px; /* altura do carrossel */
+  opacity: 1 !important;     /* sempre visível */
+  visibility: visible !important;
+}
+.swiper-wrapper{
+    margin-top: 20px; /* espaçamento acima do carrossel */
+    border: #000000 2px solid; /* borda ao redor do carrossel */
+    position: relative; /* 🔥 referência para as setas */
+    display: flex; /* usa flexbox para alinhar os slides */
+    align-items: center; /* centraliza os slides verticalmente */
+}
+.swiper-slide {
+  text-align: center; /* centraliza o conteúdo e o texto */
+  display: flex; /* usa flexbox para centralizar o conteúdo */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  background: #fff; /* cor de fundo do slide */
+} 
+
+.swiper-slide img {
+  margin-left: 20px; /* espaçamento à esquerda da imagem */;  
+  width:auto;     /* largura da imagem */
+  height: 300px;   /* altura da imagem */
+}
+/* Garante que as setas nunca fiquem invisíveis */
+.swiper-button-prev,
+.swiper-button-next {
+  display: block !important;   /* nunca somem */
+  opacity: 1 !important; /* sempre visíveis */
+  visibility: visible !important; /* sempre visíveis */
+  pointer-events: auto !important; /* sempre clicáveis */
+}
+.swiper-button-disabled {
+  opacity: 1 !important; /* sempre visível */
+  pointer-events: auto !important; /* sempre clicável */
+}
+.swiper-button-prev {
+  left: 10px; /* distância da borda */
+}
+
+/* seta da direita */
+.swiper-button-next {
+  right: 10px; /* distância da borda */
+}
+       /* Estilos para a seção de produtos */
+.products-list { /* container geral */
+  padding: 40px; /* espaçamento interno */
+  background: rgb(15, 15, 15); /* cor de fundo */
+}
+
+.product-grids {/* container dos cards */
+  display: grid; /* usa grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ajusta o número de colunas conforme o tamanho da tela */
+  gap: 20px; /* espaçamento entre os cards */
+}
+
+.product-card { /* estilo do card */
+  font-family: "Montserrat", sans-serif; /* Fonte personalizada*/
+  padding: 15px; /* espaçamento interno */
+  text-align: center; /* centr  aliza o texto */
+  transition: transform 0.2s, box-shadow 0.2s; /* transições suaves */
+  background-color: rgba(27, 27, 27, 0.829); /* azul marinho translúcido */
+  color: #fff; /* cor do texto */
+  border-radius: 12px; /* bordas arredondadas */
+  border: 1px solid #000000; /* detalhe sutil neon */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6); /* sombra padrão */
+}
+
+.product-card:hover { /* efeito ao passar o mouse */
+  transform: translateY(-5px); /* eleva o card ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* sombra mais leve ao passar o mouse */
+}
+
+.product-card img { /* estilo da imagem */
+  width: 100%; /* largura total do card */
+  height: 200px; /* altura fixa */
+  object-fit: contain; /* mantém a proporção da imagem */
+  margin-bottom: 10px; /* espaçamento abaixo da imagem */
+}
+
+.product-card h3 { /* estilo do título */
+  font-size: 18px; /* tamanho da fonte do título */
+  margin: 10px 0; /* espaçamento acima e abaixo do título */
+  color: rgb(255, 255, 255); /* cor do título */
+}
+
+.product-card .price { /* estilo do preço */
+  font-size: 20px; /* tamanho da fonte do preço */
+  font-weight: bold; /* deixa o preço em negrito */
+  color: rgb(255, 255, 255); /* cor do preço */
+  margin: 10px 0; /* espaçamento acima e abaixo do preço */
+}
+
+.product-card button { /* estilo do botão */
+  font-family: "Montserrat", sans-serif; /* Fonte personalizada*/
+  background: #03a1d6; /* cor de fundo */
+  border: 1px solid #02c0ff; /* detalhe sutil neon */ 
+  padding: 10px 20px; /* espaçamento interno */
+  color: #000000; /* cor do texto */ 
+  font-size: 16px; /* tamanho da fonte */
+  border-radius: 5px; /* bordas arredondadas */
+  cursor: pointer; /* cursor de ponteiro ao passar o mouse */
+  transition: background 0.3s ease; /* transição suave para o fundo */
+}
+
+.product-card button:hover {
+  background: #aeee00;   /* cor de fundo ao passar o mouse */
+  border: 1px solid #c2ee00; /* detalhe sutil neon */
+}
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
