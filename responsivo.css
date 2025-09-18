@@ -1,102 +1,98 @@
-/* ===== Tablets (até 1024px) ===== */
+/* Responsividade para tablets */
 @media (max-width: 1024px) {
   .search {
-    width: 220px; /* reduz campo de pesquisa */
-  }
-
-  .sidebar {
-    width: 140px; /* barra lateral mais estreita */
+    width: 250px; /* reduz campo de pesquisa */
   }
 
   .swiper {
-    width: 100%; 
+    width: 100%; /* carrossel ocupa largura total */
     height: 250px;
   }
 
   .swiper-slide img {
-    width: 100%;  /* garante que a imagem se ajuste */
-    height: 250px;
-    object-fit: cover;
+    height: 250px; /* imagem ajustada */
   }
 
-  .product-card img {
-    height: 180px;
-    width: 100%;
-    object-fit: contain;
+  .sidebar {
+    width: 180px; /* sidebar mais compacta */
+    height: auto; /* altura automática */
   }
 }
 
-/* ===== Celulares (até 768px) ===== */
+/* Responsividade para telas pequenas (celulares) */
 @media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
+  .navbar {
+    flex-direction: column; /* empilha logo, menu e busca */
     height: auto;
-    margin-bottom: 0; 
-    padding: 5px 0;
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    background: #111;
-    position: relative;  /* garante que não flutue */
-    z-index: 1;          /* menor prioridade que o carrossel */
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    display: none; /* menu escondido (pode virar hamburguer depois) */
+  }
+
+  .search {
+    width: 200px; /* campo menor */
+  }
+
+  .search-button {
+    margin-left: -80px; /* ajusta botão */
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .container {
+    flex-direction: column; /* aside fica acima */
+  }
+
+  .sidebar {
+    width: 100%; /* ocupa toda a largura */
+    height: auto; /* altura automática */
+    margin: 0;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
   }
 
   .swiper {
-    margin-top: 10px; /* dá respiro abaixo do menu */
-    position: relative;
-    z-index: 0;       /* fica por cima do fundo da sidebar */
-  }
-
-  .swiper-slide img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    display: block;
   }
-}
 
-
-  .product-grids {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-    width: 100%;
+  .swiper-slide img {
+    height: 200px;
   }
 
   .product-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
+    height: 150px; /* reduz imagens dos cards */
   }
 }
 
-/* ===== Celulares pequenos (até 480px) ===== */
+/* Responsividade para telas muito pequenas (até 480px) */
 @media (max-width: 480px) {
   .logo {
     font-size: 18px;
   }
 
+  .logo img {
+    width: 25px;
+    height: auto;
+    padding-left: 5px;
+  }
+
   .search {
-    width: 100%;
-    max-width: 160px;
+    width: 150px;
     font-size: 12px;
   }
 
   .search-button {
-    display:none;
+    margin-left: -70px;
+    font-size: 12px;
   }
 
   .product-grids {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .product-card img {
-    height: 120px;
-  }
-}
-
-
-
-
-
+    grid-template-columns: 1fr; /* apenas 1 card por linha*
