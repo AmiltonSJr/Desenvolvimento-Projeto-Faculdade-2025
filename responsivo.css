@@ -1,70 +1,80 @@
 /* ===== Tablets (até 1024px) ===== */
 @media (max-width: 1024px) {
   .search {
-    width: 250px; /* diminui campo de pesquisa */
+    width: 220px; /* reduz campo de pesquisa */
   }
 
   .sidebar {
-    width: 160px; /* barra lateral mais estreita */
+    width: 140px; /* barra lateral mais estreita */
   }
 
   .swiper {
-    width: 100%; /* carrossel ocupa largura total */
+    width: 100%; 
     height: 250px;
   }
 
   .swiper-slide img {
+    width: 100%;  /* garante que a imagem se ajuste */
     height: 250px;
+    object-fit: cover;
   }
 
   .product-card img {
     height: 180px;
+    width: 100%;
+    object-fit: contain;
   }
 }
 
 /* ===== Celulares (até 768px) ===== */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* coloca logo, menu e busca em coluna */
+    flex-direction: column;
     height: auto;
     padding: 10px;
   }
 
   .nav-menu {
-    display: none; /* esconde menu (pode depois adicionar menu hamburguer) */
+    display: none;
   }
 
   .search {
-    width: 180px;
+    width: 100%; /* ocupa largura total */
+    max-width: 220px;
+    margin: 0 auto;
   }
 
   .search-button {
-    margin-left: -90px;
-    padding: 10px 15px;
+    margin-left: 0;
+    padding: 8px 12px;
     font-size: 12px;
   }
 
   .container {
-    flex-direction: column; /* aside e conteúdo principal em coluna */
+    flex-direction: column;
+    padding: 0 10px;
   }
 
   .sidebar {
-    width: 100%; /* ocupa toda a largura */
+    width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row; /* transforma menu em horizontal */
-    overflow-x: auto; /* permite rolar se passar do limite */
+    flex-direction: row;
+    overflow-x: auto;
+    background: #111; /* deixa menu destacado */
   }
 
   .sidebar ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .sidebar ul li {
     border: none;
     padding: 10px;
     font-size: 12px;
+    flex-shrink: 0;
   }
 
   .swiper {
@@ -73,11 +83,22 @@
   }
 
   .swiper-slide img {
+    width: 100%;
     height: 200px;
+    object-fit: cover;
+  }
+
+  .product-grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    width: 100%;
   }
 
   .product-card img {
+    width: 100%;
     height: 150px;
+    object-fit: contain;
   }
 }
 
@@ -88,17 +109,19 @@
   }
 
   .search {
-    width: 140px;
+    width: 100%;
+    max-width: 160px;
     font-size: 12px;
   }
 
   .search-button {
     height: 36px;
-    padding: 8px 12px;
+    padding: 6px 10px;
   }
 
   .product-grids {
-    grid-template-columns: 1fr; /* apenas 1 card por linha */
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .product-card img {
