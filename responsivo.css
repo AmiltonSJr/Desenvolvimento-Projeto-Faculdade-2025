@@ -86,8 +86,7 @@
   }
 
   .search-button {
-    height: 36px;
-    padding: 6px 10px;
+    display:none;
   }
 
   .product-grids {
@@ -99,6 +98,7 @@
     height: 120px;
   }
 }
+
 
 
 
