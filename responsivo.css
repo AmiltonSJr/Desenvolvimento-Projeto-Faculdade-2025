@@ -1,143 +1,107 @@
-/* Extra small devices (celulares pequenos, <576px) */
-@media (max-width: 575.98px) { 
-    .logo {
-    font-size: 18px; /* reduzido para caber melhor */
-  }
-
+/* ===== Tablets (até 1024px) ===== */
+@media (max-width: 1024px) {
   .search {
-    width: 140px; /* reduzido para caber melhor */
-    font-size: 12px; /* reduzido para caber melhor */
+    width: 250px; /* diminui campo de pesquisa */
   }
 
-  .search-button {
-    font-size: 12px; /* reduzido para caber melhor */
-    padding: 6px 12px; /* reduzido para caber melhor */
-    margin-left: -75px; /* ajusta conforme o tamanho do input */
+  .sidebar {
+    width: 160px; /* barra lateral mais estreita */
   }
 
   .swiper {
-    height: 100px; /* reduzido para caber melhor */
+    width: 100%; /* carrossel ocupa largura total */
+    height: 250px;
   }
 
-  .product-card {
-    padding: 10px; /* reduzido para caber melhor */
+  .swiper-slide img {
+    height: 250px;
   }
 
   .product-card img {
-    height: 120px; /* reduzido para caber melhor */
-  }
-
-  .product-card h3 {
-    font-size: 14px; /* reduzido para caber melhor */
-  }
-
-  .product-card .price {
-    font-size: 16px; /* reduzido para caber melhor */
-  }
-
-  .product-card button {
-    font-size: 14px; /* reduzido para caber melhor */
-    padding: 8px 14px; /* reduzido para caber melhor */
+    height: 180px;
   }
 }
 
-/* Small devices (celulares grandes, ≥576px) */
-@media (min-width: 576px) and (max-width: 767.98px) { 
-  .body {
-    padding: 10px; /* reduzido para caber melhor */
-  }
-  .container{
-    flex-direction:row; /* Alinha os elementos em linha */
-    align-items: center; /* Centraliza os elementos */
+/* ===== Celulares (até 768px) ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* coloca logo, menu e busca em coluna */
     height: auto;
+    padding: 10px;
   }
-  .logo {
-    font-size: 18px; /* reduzido para caber melhor */
+
+  .nav-menu {
+    display: none; /* esconde menu (pode depois adicionar menu hamburguer) */
   }
 
   .search {
-    width: auto; /* reduzido para caber melhor */
-    font-size: 12px; /* reduzido para caber melhor */
-    margin-right: 100px; /* ajusta conforme o tamanho do input */
-    border-radius: 0; /* remove bordas arredondadas */
+    width: 180px;
   }
 
   .search-button {
-    font-size: 12px; /* reduzido para caber melhor */
-    padding: 6px 12px; /* reduzido para caber melhor */
-    margin-left: -75px; /* ajusta conforme o tamanho do input */
-    width: auto; /* ajusta conforme o tamanho do input */
-    display: none; /* mantém o botão invisível */
+    margin-left: -90px;
+    padding: 10px 15px;
+    font-size: 12px;
   }
-.sidebar{
-    display:block; /* Esconde a sidebar em telas pequenas */
-    width: 100%; /* ocupa toda a largura */
 
+  .container {
+    flex-direction: column; /* aside e conteúdo principal em coluna */
   }
-  .sidebar h2{
-    font-size: 16px; /* reduzido para caber melhor */
-    margin-left: 10px;
-  }
-  .swiper {
-    height: 100%; /* reduzido para caber melhor */
-    width: 400px; /* reduzido para caber melhor */
+
+  .sidebar {
+    width: 100%; /* ocupa toda a largura */
+    height: auto;
     display: flex;
+    flex-direction: row; /* transforma menu em horizontal */
+    overflow-x: auto; /* permite rolar se passar do limite */
   }
-  .swiper-slide{
-    width: auto; /* reduzido para caber melhor */
-    height: auto; /* reduzido para caber melhor */
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
   }
-.swiper-slide img{
-    width: 300px; /* reduzido para caber melhor */
-    height: auto; /* reduzido para caber melhor */
-}
-  .product-card {
-    padding: 10px; /* reduzido para caber melhor */
+
+  .sidebar ul li {
+    border: none;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .swiper-slide img {
+    height: 200px;
   }
 
   .product-card img {
-    height: 120px; /* reduzido para caber melhor */
+    height: 150px;
+  }
+}
+
+/* ===== Celulares pequenos (até 480px) ===== */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
   }
 
-  .product-card h3 {
-    font-size: 14px; /* reduzido para caber melhor */
+  .search {
+    width: 140px;
+    font-size: 12px;
   }
 
-  .product-card .price {
-    font-size: 16px; /* reduzido para caber melhor */
-  }
-
-  .product-card button {
-    font-size: 14px; /* reduzido para caber melhor */
-    padding: 8px 14px; /* reduzido para caber melhor */
-  }
- }
-
-/* Medium devices (tablets, ≥768px) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
-  .logo{
-    display: flex ; /* Alinha os elementos em linha */
-  }
-.search {
-
-    width: auto; /* reduzido para caber melhor */
-    font-size: 12px; /* reduzido para caber melhor */
-    margin-right: 100px; /* ajusta conforme o tamanho do input */
-    border-radius: 0 20 20 0; /* remove bordas arredondadas */
-  }
   .search-button {
-    font-size: 12px; /* reduzido para caber melhor */
-    padding: 6px 12px; /* reduzido para caber melhor */
-    margin-left: -163px; /* ajusta conforme o tamanho do input */
-    width: auto; /* ajusta conforme o tamanho do input */
-    height: 39px; /* ajusta conforme o tamanho do input */
-    display: flex; /* mantém o botão invisível */
-    text-align: center;
+    height: 36px;
+    padding: 8px 12px;
   }
 
- }
+  .product-grids {
+    grid-template-columns: 1fr; /* apenas 1 card por linha */
+  }
 
-/* Large devices (notebooks/desktops médios, ≥992px) */
-@media (min-width: 992px) and (max-width: 1199.98px) { ... }
-
-
+  .product-card img {
+    height: 120px;
+  }
+}
