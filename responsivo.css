@@ -28,9 +28,6 @@
 
 /* ===== Celulares (até 768px) ===== */
 @media (max-width: 768px) {
-  .search-button{
-  display:none;
-  }
   .sidebar {
     width: 100%;
     height: auto;
@@ -98,6 +95,7 @@
     height: 120px;
   }
 }
+
 
 
 
