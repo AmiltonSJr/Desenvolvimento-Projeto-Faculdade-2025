@@ -1,72 +1,156 @@
-/* MOBILE */
-@media (max-width: 768px) {
-  /* Header */
+/* ------------------------- */
+/* RESPONSIVIDADE GERAL      */
+/* ------------------------- */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
   .navbar {
-    flex-direction: column; /* logo e search um em cima do outro */
+    flex-wrap: wrap;
     gap: 10px;
   }
 
   .search {
-    width: 90%; /* ocupa quase toda a tela */
-    margin: 0 auto;
+    width: 250px;
   }
+
   .search-button {
-    margin-left: -60px; /* ajusta o botão ao lado */
+    margin-left: -80px;
   }
 
-  /* Sidebar */
   .sidebar {
-    width: 100%; /* ocupa largura total */
-    height: auto; /* deixa altura flexível */
-    margin: 0;
-    padding: 10px 0;
+    width: 180px;
+    height: auto;
   }
 
-  .sidebar ul {
-    display: flex; /* vira menu horizontal */
-    flex-wrap: nowrap;
-    overflow-x: auto; /* habilita scroll horizontal */
-  }
-  .sidebar ul li {
-    flex: 0 0 auto; /* impede quebra */
-    border-bottom: none; 
-    border-right: 1px solid #333;
-    padding: 10px 15px;
-  }
-
-  /* Container */
-  .container {
-    flex-direction: column; /* sidebar em cima, conteúdo embaixo */
-  }
-
-  /* Carrossel */
   .swiper {
-    width: 100%; /* ocupa a largura da tela */
-    height: auto;
-  }
-  .swiper-slide img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 250px;
   }
 
-  /* Cards de produto */
-  .product-grids {
-    grid-template-columns: 1fr 1fr; /* duas colunas no celular */
-    gap: 15px;
-  }
-  .product-card img {
-    height: 150px; /* menor no mobile */
+  .swiper-slide img {
+    height: 220px;
   }
 }
 
-/* MUITO PEQUENO (ex: iPhone SE) */
-@media (max-width: 480px) {
-  .product-grids {
-    grid-template-columns: 1fr; /* 1 card por linha */
+/* Celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
   }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .search {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .search-button {
+    margin: 0;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .nav-menu a {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    order: 2;
+    margin: 10px 0;
+  }
+
+  .main-content {
+    order: 1;
+    height: auto;
+    padding: 10px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .swiper-slide img {
+    height: 180px;
+    margin-left: 0;
+  }
+
+  .products-list {
+    padding: 20px;
+  }
+
+  .product-grids {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .product-card img {
+    height: 150px;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  .logo span {
+    font-size: 18px;
+  }
+
   .search {
     width: 100%;
   }
-}
 
+  .search-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .swiper {
+    height: 160px;
+  }
+
+  .swiper-slide img {
+    height: 140px;
+  }
+
+  .product-grids {
+    grid-template-columns: 1fr; /* Apenas uma coluna */
+  }
+
+  .product-card img {
+    height: 120px;
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+  }
+
+  .product-card .price {
+    font-size: 18px;
+  }
+
+  .product-card button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
