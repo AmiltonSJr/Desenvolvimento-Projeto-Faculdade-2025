@@ -64,7 +64,7 @@ body{
     padding: 10px; /* Espaçamento interno */
     border-radius: 20px 0 0 20px; /* Bordas arredondadas */
     border: #090c35 2px solid ; /* Remove borda padrão */
-    width: 400px; /* Largura do campo de pesquisa */
+    width: 300px; /* Largura do campo de pesquisa */
     max-height: auto; /* Altura automática */
     font-size: 14px; /* Tamanho da fonte */
     font-family: "Montserrat", sans-serif; /* Fonte personalizada */
@@ -297,4 +297,5 @@ body{
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+
 }
