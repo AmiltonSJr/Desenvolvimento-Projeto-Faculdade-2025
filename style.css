@@ -237,9 +237,8 @@ body{
 }
 
 .product-card:hover { /* efeito ao passar o mouse */
-  color: white;
-  background: #110dcc;   /* cor de fundo ao passar o mouse */
-  border: 1px solid #110dcc; /* detalhe sutil neon */
+  ransform: translateY(-5px); /* eleva o card ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* sombra mais leve ao passar o mouse */
 }
 
 .product-card img { /* estilo da imagem */
@@ -275,8 +274,9 @@ body{
 }
 
 .product-card button:hover {
-  background: #aeee00;   /* cor de fundo ao passar o mouse */
-  border: 1px solid #c2ee00; /* detalhe sutil neon */
+  color: white;
+  background: #110dcc;   /* cor de fundo ao passar o mouse */
+  border: 1px solid #110dcc; /* detalhe sutil neon */
 }
 .whatsapp-float {
   position: fixed;
@@ -374,4 +374,5 @@ body{
   font-size: 13px;
   color: #aaa;
 }
+
 
