@@ -1,24 +1,72 @@
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 18px;
-  }
-
-  .logo img {
-    width: 25px;
-    height: auto;
-    padding-left: 5px;
+/* MOBILE */
+@media (max-width: 768px) {
+  /* Header */
+  .navbar {
+    flex-direction: column; /* logo e search um em cima do outro */
+    gap: 10px;
   }
 
   .search {
-    width: 150px;
-    font-size: 12px;
+    width: 90%; /* ocupa quase toda a tela */
+    margin: 0 auto;
   }
-
   .search-button {
-    margin-left: -70px;
-    font-size: 12px;
+    margin-left: -60px; /* ajusta o botão ao lado */
   }
 
+  /* Sidebar */
+  .sidebar {
+    width: 100%; /* ocupa largura total */
+    height: auto; /* deixa altura flexível */
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .sidebar ul {
+    display: flex; /* vira menu horizontal */
+    flex-wrap: nowrap;
+    overflow-x: auto; /* habilita scroll horizontal */
+  }
+  .sidebar ul li {
+    flex: 0 0 auto; /* impede quebra */
+    border-bottom: none; 
+    border-right: 1px solid #333;
+    padding: 10px 15px;
+  }
+
+  /* Container */
+  .container {
+    flex-direction: column; /* sidebar em cima, conteúdo embaixo */
+  }
+
+  /* Carrossel */
+  .swiper {
+    width: 100%; /* ocupa a largura da tela */
+    height: auto;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Cards de produto */
   .product-grids {
-    grid-template-columns: 1fr; /* apenas 1 card por linha*
+    grid-template-columns: 1fr 1fr; /* duas colunas no celular */
+    gap: 15px;
+  }
+  .product-card img {
+    height: 150px; /* menor no mobile */
+  }
+}
+
+/* MUITO PEQUENO (ex: iPhone SE) */
+@media (max-width: 480px) {
+  .product-grids {
+    grid-template-columns: 1fr; /* 1 card por linha */
+  }
+  .search {
+    width: 100%;
+  }
+}
+
